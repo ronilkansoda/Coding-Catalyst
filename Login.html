@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login_container">
+        <div class="login_form_container">
+            <div class="left">
+                <form class="form_container" onsubmit="handleSubmit(event)">
+                    <h1>Login Page</h1>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        onchange="handleChange(event)"
+                        value=""
+                        required
+                        class="input"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        onchange="handleChange(event)"
+                        value=""
+                        required
+                        class="input"
+                    />
+                    <div class="error_msg"></div>
+                    <button type="submit" class="green_btn">Sign In</button>
+                </form>
+            </div>
+            <div class="right">
+                <h1>New User ?</h1>
+                <a href="/signup">
+                    <button type="button" class="white_btn">Sign Up</button>
+                </a>
+                <button class="login_with_google_btn" onclick="loginwithgoogle()">Google Sign In</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
