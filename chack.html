@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task List</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .task 
+    {
+        margin-bottom: 20px;
+    }
+    .circle 
+    {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        margin-right: 10px;
+        border: 1px solid #000;
+    }
+    .circle.green 
+    {
+        background-color: green;
+    }
+
+    .container 
+    {
+    width:100%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  h1 
+  {
+    text-align: center;
+    margin-right: 40px;
+  }
+  
+  .weeks 
+  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .week 
+  {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgb(250, 92, 92);
+  }
+  
+  .modules 
+  {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .module 
+  {
+    margin-bottom: 5px;
+  }
+  
+  .module a 
+  {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #ddd;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .progress {
+        height: 100%;
+        background-color: green;
+        border-radius: 5px;
+    }
+
+  
+    @media (max-width: 768px) 
+    {
+        .circle 
+        {
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+body {
+    padding-top: 70px; /* Adjust as needed based on the height of your navbar */
+}
+
+.logo img {
+    height: 50px; /* Adjust the height of the logo as needed */
+}
+
+.nav-options {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-options li {
+    margin-right: 20px;
+}
+
+.nav-options li:last-child {
+    margin-right: 0;
+}
+
+.nav-options li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Login button styles */
+.login-btn {
+    padding: 8px 15px;
+    background-color: #366cb7;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #1d447a;
+}
+
+/* Profile image styles */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff; /* Add a border to the profile image */
+}
+
+</style>
+</head>
+<body>
+
+   
+
+      <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-options">
+            <li><a href="#">Leaderboard</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
+            <li><img src="Logo.png" alt="Profile" class="profile-img"></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Course Name</h1><br>
+        <div class="weeks">
+          <div class="week">
+            <h2>Week 1</h2>
+            <ul class="modules">
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle1')">Module 1.1 - Introduction</a>
+                <span class="circle" id="circle1"></span>
+              </li>
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle2')">Module 1.2 - Getting Started</a>
+                <span class="circle" id="circle2"></span>
+              </li>
+              </ul>
+          </div>
+          <div class="week">
+            <h2>Week 2</h2>
+            <ul class="modules">
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle3')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle3"></span>
+              </li>
+              </ul>
+          </div>
+          <div class="week">
+            <h2>Week 3</h2>
+            <ul class="modules">
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle4')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle4"></span>
+              </li>
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle5')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle5"></span>
+              </li>
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle6')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle6"></span>
+              </li>
+              </ul>
+          </div>
+          <div class="week">
+            <h2>Week 4</h2>
+            <ul class="modules">
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle7')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle7"></span>
+              </li>
+              </ul>
+          </div>
+          <div class="week">
+            <h2>Week 5</h2>
+            <ul class="modules">
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle8')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle8"></span>
+              </li>
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle9')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle9"></span>
+              </li>
+              <li class="module">
+                <a href="https://github.com/R0hit-Yadav" onclick="toggleCircle('circle10')">Module 2.1 - Intermediate Concepts</a>
+                <span class="circle" id="circle10"></span>
+              </li>
+              </ul>
+          </div>
+          </div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+<script>
+    // Function to toggle circle color and save state to sessionStorage
+    function toggleCircle(circleId) 
+    {
+        var circle = document.getElementById(circleId);
+        if (circle.classList.contains('green')) 
+        {
+            circle.classList.remove('green');
+            sessionStorage.removeItem(circleId);
+        } else 
+        {
+            circle.classList.add('green');
+            sessionStorage.setItem(circleId, 'green');
+        }
+    }
+
+    // Function to check sessionStorage on page load and set circle colors accordingly
+    function setCircleColors() 
+    {
+        var circles = document.querySelectorAll('.circle');
+        circles.forEach(function(circle) 
+        {
+            var circleId = circle.id;
+            var circleState = sessionStorage.getItem(circleId);
+            if (circleState === 'green') 
+            {
+                circle.classList.add('green');
+            }
+        });
+        updateProgressBar();
+        
+        
+    }
+
+
+    function updateProgressBar() 
+    {
+        var circles = document.querySelectorAll('.circle.green');
+        var progress = (circles.length / document.querySelectorAll('.circle').length) * 100;
+        document.getElementById('progress').style.width = progress + '%';
+    }
+    setCircleColors();
+</script>
+
+</body>
+</html>

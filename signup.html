@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup_container">
+        <div class="signup_form_container">
+            <div class="left">
+                <h1>Welcome Back</h1>
+                <a href="/login">
+                    <button type="button" class="white_btn">Sign in</button>
+                </a>
+                <div class="card">
+                    <h1>UPLOAD YOUR IMAGE HERE</h1>
+                    <img src="defaultProfilePic" alt="NO IMG" id="profile-pic"></img>
+                    <label for="input-file">Upload image</label>
+                    <input
+                        type="file"
+                        accept="image/jpeg, image/png, image/gif"
+                        class="input_file"
+                        id="input-file"
+                        name="file"
+                        onchange="handleImageChange(event)"
+                        required
+                    ></input>
+                </div>
+            </div>
+            <div class="right">
+                <form class="form_container" onsubmit="handleSubmit(event)">
+                    <h1>Create Account</h1>
+                    <input
+                        type="text"
+                        placeholder="First Name"
+                        name="firstName"
+                        onchange="handleChange(event)"
+                        value=""
+                        required
+                        class="input"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Last Name"
+                        name="lastName"
+                        onchange="handleChange(event)"
+                        value=""
+                        required
+                        class="input"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        onchange="handleChange(event)"
+                        value=""
+                        required
+                        class="input"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        onchange="handleChange(event)"
+                        value=""
+                        required
+                        class="input"
+                    />
+                    <div class="error_msg"></div>
+                    <button type="submit" class="green_btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
