@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.course {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+input[type="date"] {
+    /* Adjust appearance for date input */
+    padding: 6px 8px;
+}
+</style>
+<body>
+    <body>
+        <div class="container">
+            <h1>Course Durations</h1>
+            <form>
+                <div class="course">
+                    <label for="java">Duration for JavaScript Course:</label>
+                    <!-- <input type="number" id="java" name="java_duration" placeholder="Enter duration in weeks"> -->
+                    <input type="date" id="java_date" name="java_date">
+                </div>
+                <div class="course">
+                    <label for="python">Duration for Java Course:</label>
+                    <!-- <input type="number" id="python" name="python_duration" placeholder="Enter duration in weeks"> -->
+                    <input type="date" id="python_date" name="python_date">
+                </div>
+                <div class="course">
+                    <label for="javascript">Duration for Web Development Course:</label>
+                    <!-- <input type="number" id="javascript" name="javascript_duration" placeholder="Enter duration in weeks"> -->
+                    <input type="date" id="javascript_date" name="javascript_date">
+                </div>
+               
+            </form>
+        </div>
+        <a href="chack.html"><button class="next-button">Next Page></button></a>
+    </body>
+    
+</body>
+</html>

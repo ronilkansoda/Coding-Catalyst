@@ -5,153 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Choice</title>
-    <style>
-        body 
-        {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f1f1;
-        }
-
-        .container 
-        {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 70px;
-        }
-
-        h1 
-        {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .button-container 
-        {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .button 
-        {
-            padding: 10px 20px;
-            margin: 10px;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #007bff;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .next-button
-        {
-            padding: 10px 200px;
-            margin: 10px;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-            background-color: #1277e4;
-            color: #e5e9ee;
-            font-size: 16px;
-            cursor: pointer;
-
-        }
-
-        .button.active 
-        {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .button:hover 
-        {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .next-button:hover
-        {
-            background-color: #04458b;
-
-        }
-
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Navbar styles */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it stays on top of other elements */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-}
-body {
-    padding-top: 70px; /* Adjust as needed based on the height of your navbar */
-}
-
-.logo img {
-    height: 50px; /* Adjust the height of the logo as needed */
-}
-
-.nav-options {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-.nav-options li {
-    margin-right: 20px;
-}
-
-.nav-options li:last-child {
-    margin-right: 0;
-}
-
-.nav-options li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Login button styles */
-.login-btn {
-    padding: 8px 15px;
-    background-color: #366cb7;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.login-btn:hover {
-    background-color: #1d447a;
-}
-
-/* Profile image styles */
-.profile-img 
-{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #fff; /* Add a border to the profile image */
-}
-
-    </style>
+    <link rel="stylesheet" href="course choice.css">
 </head>
 <body>
 
@@ -181,7 +35,7 @@ body {
             <button class="button" onclick="toggleButton(this)">MongoDB</button>
             <button class="button" onclick="toggleButton(this)">MATLAB</button>
             <button class="button" onclick="toggleButton(this)">JavaScript</button>
-            <button class="next-button">Next Page ></button>
+            <a href="duration.html"><button class="next-button">Next Page ></button></a>    
         </div>
     </div>
 
@@ -197,3 +51,4 @@ body {
     </script>
 </body>
 </html>
+
